@@ -1,0 +1,11 @@
+.card-dash {
+    text-align: center;
+    background-color: #eee;
+    color: #2e353d;
+    padding: 25px;
+
+}
+
+.card-dash .number {
+    font-size: 40px;
+}

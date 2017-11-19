@@ -3,11 +3,34 @@
 
 		<div class="page-header">
 			<h3>Dashboard</h3>
-
-			<p>Total de locais cadastrados: <span>{{totalPlaces}}</span></p>
-			<p>Total de usuários cadastrados: <span>{{totalUsers}}</span></p>
-
-			<p>Ultimo usuário cadastrado: <span>{{lastUser.nome}} {{lastUser.criacao | date:'medium'}}</span></p>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card-dash">
+						<p class="number">{{totalPlaces}}</p>
+						<p>Locais cadastrados</p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card-dash">
+						<p class="number">{{totalUsers}}</p>
+						<p>Usuários cadastrados</p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card-dash">
+						<p>Último usuário cadastrado</p> 
+						<p>{{lastUserName}}</p> 
+						<p>{{lastUserDate | date:'medium'}}</p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="card-dash">
+						<p>Último local cadastrado</p> 
+						<p>{{lastPlaceName}}</p> 
+						<p>{{lastPlaceDate | date:'medium'}}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 	</div>

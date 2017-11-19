@@ -9,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  private totalPlaces;
-  private totalUsers;
-  private lastUser;
-  private lastPlace;
+  private totalPlaces: number;
+  private totalUsers: number;
+  private lastUserName;
+  private lastUserDate;
+  private lastPlaceName;
+  private lastPlaceDate;
 
   constructor(private api: ApiService, private route: Router) { }
 
@@ -28,6 +30,10 @@ export class DashboardComponent implements OnInit {
       .subscribe(response =>{
         if(response.success) {
           this.totalPlaces = response.data.length;
+          let arrayPLaces = response.data;
+          let lastPlace = arrayPLaces[arrayPLaces.length - 1];
+          this.lastPlaceName = lastPlace.nome;
+          this.lastPlaceDate = lastPlace.criacao;
         }
       });
 
@@ -36,8 +42,9 @@ export class DashboardComponent implements OnInit {
         if(response.success) {
           this.totalUsers = response.data.length;
           let arrayUser = response.data;
-          this.lastUser = arrayUser[arrayUser.length - 1];
-          console.log(this.lastUser);
+          let lastUser = arrayUser[arrayUser.length - 1];
+          this.lastUserName = lastUser.nome;
+          this.lastUserDate = lastUser.criacao;
         }
       });
       
