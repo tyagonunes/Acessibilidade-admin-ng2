@@ -1,0 +1,31 @@
+<section class="container">
+    <div class="page-panel">
+  
+      <div class="page-header">
+        <h3>Locais cadastrados</h3>
+      </div>
+      <div class="page-search">
+          <input type="text" [(ngModel)]="term" class="form-control" placeholder="Busca local">
+      </div>
+      <div class="list-place">
+        <table class="table">
+          <thead>	
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let place of places | filter:term">
+            <td>{{place.nome}}</td>
+            <td>{{place.descricao}}</td>
+            <td>
+            <a href="javascript:;"  class="btn btn-info" (click)="viewPlace(place)" ><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  

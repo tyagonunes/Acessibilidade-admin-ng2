@@ -1,0 +1,32 @@
+<section class="container">
+  <div class="page-panel">
+    <div class="page-header">
+      <h3>Editar Local</h3>
+    </div>
+
+    <form #h="ngForm">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="place.nome">
+        </div>
+
+        <div class="form-group">
+          <label for="latitude">Latitude:</label>
+          <input type="text" class="form-control" id="latitude" name="latitude" [(ngModel)]="place.latitude">
+        </div>
+
+        <div class="form-group">
+          <label for="longitude">Longitude:</label>
+          <input type="text" class="form-control" id="longitude" name="longitude" [(ngModel)]="place.longitude">
+        </div>
+        <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" [(ngModel)]="place.descricao">
+        </div>
+    </form>
+    <div class="button-nav">
+      <a routerLink='/local' class="btn btn-warning"><i class="fa fa-ban" aria-hidden="true"></i></a>
+      <button class="btn btn-primary" (click)="putLocal()"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+    </div>
+  </div>  
+</section>

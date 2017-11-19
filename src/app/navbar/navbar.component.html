@@ -1,0 +1,37 @@
+<!-- <div class="sidenav">
+  <div class="sidenav-header">
+      <h2>Mapa da Acessibilidade</h2>
+  </div>
+  <ul>
+      <li><a href="">Locais</a></li>
+      <li><a href="">Usuários</a></li>
+  </ul>
+</div> -->
+<nav>
+
+<div class="nav-side-menu">
+    <div class="brand">Mapa da Acessibilidade</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li>
+                <a [routerLink]="['**']">
+                    <i class="fa fa-home fa-lg"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['users']">
+                    <i class="fa fa-user fa-lg"></i> Usuários cadastrados
+                </a>
+            </li>
+
+            <li>
+                <a [routerLink]="['local']">
+                    <i class="fa fa-map-marker fa-lg"></i> Locais cadastrados
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+</nav>

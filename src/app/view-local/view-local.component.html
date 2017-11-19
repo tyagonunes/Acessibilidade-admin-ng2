@@ -1,0 +1,30 @@
+<section class="container">
+  <div class="page-panel">
+    <div class=page-header>
+      <h3>Detalhes do local</h3>
+    </div>
+
+    <div>
+      <p><b>Nome:</b> <span>{{place.nome}}</span></p>
+      <p><b>Latitude:</b> <span>{{place.latitude}}</span></p>
+      <p><b>Longitude:</b> <span>{{place.longitude}}</span></p>
+      <p><b>Descrição:</b> <span>{{place.descricao}}</span></p>
+      <p><b>Acessos cadastrados nesse local:</b></p>
+      <ul *ngIf="place.acessos.length">
+        <li *ngFor="let access of place.acessos">{{access}}</li>
+      </ul>
+
+      <ul *ngIf="!place.acessos.length">
+          <li>Não possui acessos cadastrados</li>
+        </ul>
+    </div>
+
+    <div class="button-nav">
+      <div class="button-nav-block">
+        <a routerLink='/local' class="btn btn-warning"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+        <button class="btn btn-danger" (click)="deletePlace(place._id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        <a  class="btn btn-primary" (click)="editPlace(place)"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
