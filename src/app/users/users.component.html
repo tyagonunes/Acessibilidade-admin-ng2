@@ -2,10 +2,10 @@
     <div class="page-panel">
   
       <div class="page-header">
-        <h3>Usuários cadastrados</h3>
+        <h3>Usuários</h3>
       </div>
       <div class="page-search">
-          <input type="text" [(ngModel)]="term" class="form-control" placeholder="Busca local">
+          <input type="text" [(ngModel)]="term" class="form-control" placeholder="Busca usuário">
       </div>
       <div class="list-place">
         <table class="table">
@@ -20,7 +20,7 @@
             <td>{{user.nome}}</td>
             <td>{{user.criacao | date:'medium'}}</td>
             <td>
-            <a href="javascript:;"  class="btn btn-info"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            <a href="javascript:;"  class="btn btn-danger" (click)="deleteUser(user)"><i class="fa fa-trash"></i></a>
             </td>
           </tr>
           </tbody>

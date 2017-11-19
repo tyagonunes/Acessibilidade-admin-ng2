@@ -35,6 +35,13 @@ export class ApiService {
         .map(res => res.json())
     }
 
+    removeUser(id) {
+        console.log(id);
+        return this.http
+        .delete(this.url + "usuarios/deleteUser/"+ id, { headers: this.headers } )
+        .map(res => res.json())
+    }
+
     editLocal(local) {
         this.createHeaders();
 

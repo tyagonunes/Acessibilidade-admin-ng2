@@ -16,5 +16,7 @@ body {
 }
 
 .page-search {
-    width: 500px;
+    width: 300px;
+    float: none;
+    margin: 20px auto;
 }
